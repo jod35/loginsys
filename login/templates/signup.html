@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block body %}
+<center>
+        <div class="card">
+                <form action="/signup" method="post">
+                  
+                        <div class="form-group">
+                            <h3>Sign Up</h3>
+                                {{ form.username.label }}
+                                   <br>
+                                {{ form.username}}
+                                     <br>
+                                {{ form.email.label }}
+                                  <br>
+                                {{ form.email}}
+                                     <br>
+                                {{ form.password.label }}
+                                     <br>
+                                {{ form.password}}
+
+                                {{ form.submit(class='btn btn-primary') }}
+                        </div>
+                               
+                  
+                </form>
+            </div>
+</center>
+{% endblock body %}

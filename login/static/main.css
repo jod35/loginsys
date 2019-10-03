@@ -1,0 +1,12 @@
+.main-body{
+    min-height: 550px;
+}
+footer{
+    background-color: #69b0e4;
+    padding: 20px;
+    color: white;
+}
+.card {
+width: 300px;
+margin-top: 20px;
+}
