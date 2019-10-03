@@ -5,6 +5,6 @@ from wtforms.validators import DataRequired,Length,Email,EqualTo
 class SignUpForm(FlaskForm):
     username=StringField("Your Username",validators=[DataRequired(),Length(min=4,max=40)])
     email=StringField("Your Email",validators=[DataRequired(),Length(max=80)])
-    password=StringField("Password",validators=[DataRequired(),EqualTo('confirm')])
+    password=PasswordField("Password",validators=[DataRequired(),EqualTo('confirm')])
     confirm=StringField("Confirm the Password",validators=[DataRequired()])
     submit=SubmitField("Sign Up")
