@@ -1,6 +1,6 @@
 from login import app,db
 from flask import render_template,request,redirect
-from login.forms import SignUpForm
+from login.forms import SignUpForm,LoginForm
 from login.models import User
 from flask_bcrypt import Bcrypt
 
@@ -22,6 +22,13 @@ def create_user():
         )
         db.session.add(new_user)
         db.session.commit()
+
+
         
         return redirect('/')
     return render_template('signup.html',form=form)
+
+@app.route('/login')
+def Login():
+    form = LoginForm()
+    return render_template('login.html',form=form)
